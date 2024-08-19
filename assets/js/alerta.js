@@ -1,16 +1,17 @@
-var btnCarrito = document.querySelector("#btn-carrito")
-var alerta = document.querySelector(".alert")
-var cerrarAlerta = document.querySelector("#btn-cerrar-alerta")
+var btnCarrito = document.querySelectorAll("#btn-carrito");
+var alerta = document.querySelector(".alert");
+var cerrarAlerta = document.querySelector("#btn-cerrar-alerta");
 
-var abrirAlerta = () =>{
-    console.log("carrito")
-    alerta.style.display = "flex"
-    
+var abrirAlerta = () => {
+    alerta.style.display = "flex";
 }
-btnCarrito.onclick = abrirAlerta
 
+btnCarrito.forEach((btn) => {
+    btn.onclick = abrirAlerta;
+});
 
-var funcionCerrarAlerta = () =>{
-    alerta.style.display = "none"
+var funcionCerrarAlerta = () => {
+    alerta.style.display = "none";
 }
-cerrarAlerta.onclick = funcionCerrarAlerta
+
+cerrarAlerta.onclick = funcionCerrarAlerta;
